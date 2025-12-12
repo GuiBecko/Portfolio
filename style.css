@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.main-container{
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 116, 116);
+    margin-top: 50px;
+    width: 50%;
+    height:100vh;
+}
+.profile{
+    display: flex;
+    padding: 30px;
+    margin-left: 40px;
+}
+.pfp{
+    background: blue;
+    width: 400px;
+    height: 400px;
+    margin-right: 30px;
+}
+.profile-texts h1{
+    font-size: xxx-large;
+}
+.profile-texts ul{
+    padding:0;
+    margin-left: 13px;
+}
+/*///////////////*/
+.projetos{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.linha1, .linha2 {
+    display: flex;
+    justify-content: center;
+}
+.maior {
+    background-color: blue;
+    width: 50%;
+    height: 200px;
+    margin: 5px;
+}
+.menor {
+    background-color: blue;
+    width: 20%;
+    height: 200px;
+    margin: 5px;
+}
