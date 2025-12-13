@@ -10,7 +10,7 @@ body{
     background-color: rgb(223, 116, 116);
     margin-top: 50px;
     width: 50%;
-    height:100vh;
+    
 }
 .profile{
     display: flex;
@@ -25,6 +25,7 @@ body{
 }
 .profile-texts h1{
     font-size: xxx-large;
+    margin-bottom: -10px;
 }
 .profile-texts ul{
     padding:0;
@@ -35,6 +36,10 @@ body{
     margin-top: 60px;
     display: flex;
     flex-direction: column;
+}
+.projetos h1{
+    margin-left: 20%;
+    font-size: 40px;
 }
 .linha1, .linha2 {
     display: flex;
@@ -51,4 +56,38 @@ body{
     width: 20%;
     height: 200px;
     margin: 5px;
+}
+/*//////////////*/
+.contatos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contatos h1{
+    margin-left: 50%;
+    margin-top: 40px;
+    font-size: 40px;
+}
+.contatos .github{
+    background-color: blue;
+    width: 70%;
+    height: 70px;
+    margin-bottom: 10px;
+}
+.contatos-menor{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.whatsapp{
+    background-color: blue;
+    width: calc(35% - 5px);
+    height: 50px;
+    margin-right: 5px;
+}
+.email{
+    background-color: blue;
+    width: calc(35% - 5px);
+    height: 50px;
+    margin-left: 5px;
 }
