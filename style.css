@@ -31,6 +31,20 @@ body{
     padding:0;
     margin-left: 13px;
 }
+.contatos{
+    display: flex;
+}
+.contatos a{
+    height: 30px;
+    width: 30px;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+}
+.contatos a img{
+    height: 100%;
+    width: 100%;
+}
 /*///////////////*/
 .projetos{
     margin-top: 60px;
@@ -48,46 +62,34 @@ body{
 .maior {
     background-color: blue;
     width: 50%;
-    height: 200px;
+    height: 400px;
     margin: 5px;
 }
 .menor {
     background-color: blue;
     width: 20%;
-    height: 200px;
+    height: 400px;
+    margin: 5px;
+}
+
+.maior img, .menor img{
+    height: 300px;
+    width: 100%;
+    transition: 0.5s;
+}
+.maior img:hover, .menor img:hover{
+    cursor: pointer;
+    height: 305px;
+    width: 101%;
+}
+.maior p, .menor p{
+    margin-left: 5px;
+}
+.linguagens-projeto{
+    display: flex;
+}
+.linguagens p{
     margin: 5px;
 }
 /*//////////////*/
-.contatos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.contatos h1{
-    margin-left: 50%;
-    margin-top: 40px;
-    font-size: 40px;
-}
-.contatos .github{
-    background-color: blue;
-    width: 70%;
-    height: 70px;
-    margin-bottom: 10px;
-}
-.contatos-menor{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.whatsapp{
-    background-color: blue;
-    width: calc(35% - 5px);
-    height: 50px;
-    margin-right: 5px;
-}
-.email{
-    background-color: blue;
-    width: calc(35% - 5px);
-    height: 50px;
-    margin-left: 5px;
-}
+
