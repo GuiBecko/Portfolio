@@ -1,35 +1,112 @@
+:root{
+    --bg-dark:hsl(0, 0%, 0%);
+    --bg: hsl(0, 0%, 5%);
+    --bg-light:hsl(0, 0%, 10%);
+    --text: hsl(0, 0%, 95%);
+    --text-muted: hsl(0, 0%, 70%);
+    --highlight: hsl(0, 0%, 40%);
+    
+    --icon-filter-light: invert(1);
+    --icon-filter-dark: invert(0);
+    --icon-filter-current: var(--icon-filter-light);
+    --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+}
 body{
     margin: 0;
     display: flex;
     justify-content: center;
+    background-color: var(--bg-dark);
+}
+label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px;
+}
+.toggle-checkbox{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.toggle-slot{
+    cursor: pointer;
+    position: relative;
+    height: 3.5em;
+    width: 7em;
+    border: 0px solid transparent;
+    border-radius: 10em;
+    background-color: white;
+    transition: background-color .25s;
+}
+.toggle-checkbox:checked ~ .toggle-slot{
+    background-color: #374151;
+}
+.toggle-button{
+    transform: translate(0.3em, 0.25em);
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: yellow;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button{
+    background-color: white;
+    transform: translate(3.65em, 0.25em);
+}
+.center{
+    position: absolute;
+    transform: translate(50%, 50%);
+    background-color: #ffeccf;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+}
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button .center{
+    background-color: #374151;
 }
 .main-container{
+    background: var(--gradient);
     padding-bottom: 40px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(223, 116, 116);
+    background-color: var(--bg);
     margin-top: 50px;
     width: 50%;
-    
+    border-top: 1px solid var(--highlight);
+    border-radius: 20px;
 }
+
 .profile{
     display: flex;
     padding: 30px;
     margin-left: 40px;
 }
 .pfp{
-    background: blue;
+    background: var(--bg-light);
     width: 400px;
     height: 400px;
     margin-right: 30px;
 }
 .profile-texts h1{
+    color: var(--text);
     font-size: xxx-large;
     margin-bottom: -10px;
+}
+.profile-texts h2{
+    color: var(--text-muted);
+}
+.profile-texts p{
+    color: var(--text-muted);
 }
 .profile-texts ul{
     padding:0;
     margin-left: 13px;
+}
+.profile-texts li{
+    color: var(--text-muted);
 }
 .contatos{
     display: flex;
@@ -37,13 +114,14 @@ body{
 .contatos a{
     height: 30px;
     width: 30px;
-    background-color: blue;
+    background-color: var(--bg-light);
     margin: 10px;
     padding: 10px;
 }
 .contatos a img{
     height: 100%;
     width: 100%;
+    filter: var(--icon-filter-current);
 }
 /*///////////////*/
 .projetos{
@@ -52,6 +130,7 @@ body{
     flex-direction: column;
 }
 .projetos h1{
+    color: var(--text);
     margin-left: 20%;
     font-size: 40px;
 }
@@ -60,18 +139,17 @@ body{
     justify-content: center;
 }
 .maior {
-    background-color: blue;
+    background-color: var(--bg-light);
     width: 50%;
     height: 400px;
     margin: 5px;
 }
 .menor {
-    background-color: blue;
+    background-color: var(--bg-light);
     width: 20%;
     height: 400px;
     margin: 5px;
 }
-
 .maior img, .menor img{
     height: 300px;
     width: 100%;
@@ -84,6 +162,10 @@ body{
 }
 .maior p, .menor p{
     margin-left: 5px;
+    color: var(--text-muted);
+}
+.maior h3, .menor h3{
+    color: var(--text);
 }
 .linguagens-projeto{
     display: flex;
@@ -91,5 +173,22 @@ body{
 .linguagens p{
     margin: 5px;
 }
-/*//////////////*/
+/* ------------------------------------------- */
+/* Estilos para o Light Mode */
+/* ------------------------------------------- */
+
+
+.light-theme{
+    --bg-dark:hsl(0, 0%, 90%);
+    --bg: hsl(0, 0%, 95%);
+    --bg-light:hsl(0, 0%, 100%);
+    --text: hsl(0, 0%, 5%);
+    --text-muted: hsl(0, 0%, 30%);
+    --highlight: hsl(0, 0%, 60%)
+    
+    --icon-filter-light: invert(1);
+    --icon-filter-dark: invert(0);
+    --icon-filter-current: var(--icon-filter-dark);
+    --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
+}
 
