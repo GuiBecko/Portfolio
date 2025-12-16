@@ -1,6 +1,13 @@
-function changeTheme(checkbox){
-    const body = document.getElementById('body')
+function changeTheme(checkbox) {
+    const body = document.getElementById('body');
+    const isChecked = checkbox.checked;
 
-    body.classList.toggle('light-theme')
-
+    
+    if (isChecked) {
+        body.classList.remove('light-theme');
+        
+    } else {
+        body.classList.add('light-theme');
+        
+    }
 }

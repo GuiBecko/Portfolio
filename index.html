@@ -6,31 +6,36 @@
     <title>Guilherme Becker</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+</style>
 </head>
 <body class="light-theme" id="body">
-    <label>
-        <input class="toggle-checkbox" type="checkbox" onchange="changeTheme(this)">
-        <div class="toggle-slot">
-            <div class="toggle-button">
-                <div class="center"></div>
-            </div>
-        </div>
-    </label>
     <section class="main-container">
+        <label>
+            <input class="toggle-checkbox" type="checkbox" onchange="changeTheme(this)">
+            <div class="toggle-slot">
+                <div class="toggle-button">
+                    <div class="center"></div>
+                </div>
+            </div>
+        </label>
 
         <section class="profile">
 
-            <div class="pfp"></div>
+            <div class="pfp">
+                <img src="" alt="">
+            </div>
 
             <div class="profile-texts">
 
-                <h1>Nome</h1>
+                <h1 class="ubuntu-regular">Guilherme <br> Becker&#128075;</h1>
                 <h2>Front-end developer</h2>
-                <p>Localização</p>
+                <p>Brasil &#127463;&#127479;</p>
                 <ul class="linguagens">
-                    <li>Linguagem 1</li>
-                    <li>Linguagem 2</li>
-                    <li>Linguagem 3</li>
+                    <li>Javascript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
                 </ul>
                 <section class="contatos">
                     <a href="https://github.com/GuiBecko" class="github" target="_blank">
@@ -48,7 +53,7 @@
         </section>
 
         <section class="projetos">
-            <h1>Projetos</h1>
+            <h1>Meus Projetos</h1>
             <section class="linha1">
 
                 <div class="maior">
@@ -65,7 +70,9 @@
                 </div>
                 
                 <div class="menor">
-                    <img src="" alt="">
+                    <a href="https://github.com/GuiBecko/bookcataloguesite2" target="_blank">
+                        <img src="" alt="">sem imagem
+                    </a>
                     <h3 class="titulo-projeto">Acervo de livros digital</h3>
                     <section class="linguagens-projeto">
                         <p>Javascript</p>

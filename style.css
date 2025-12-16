@@ -68,6 +68,7 @@ label{
     background-color: #374151;
 }
 .main-container{
+    position: relative;
     background: var(--gradient);
     padding-bottom: 40px;
     display: flex;
@@ -78,7 +79,11 @@ label{
     border-top: 1px solid var(--highlight);
     border-radius: 20px;
 }
-
+h1{
+    -webkit-user-select: none;    
+    -khtml-user-select: none;     
+    -moz-user-select: none; 
+}
 .profile{
     display: flex;
     padding: 30px;
@@ -94,19 +99,32 @@ label{
     color: var(--text);
     font-size: xxx-large;
     margin-bottom: -10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 .profile-texts h2{
     color: var(--text-muted);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 .profile-texts p{
     color: var(--text-muted);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 .profile-texts ul{
     padding:0;
-    margin-left: 13px;
 }
 .profile-texts li{
+    padding-bottom: 5px;
     color: var(--text-muted);
+    list-style-type: none;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 .contatos{
     display: flex;
@@ -133,6 +151,9 @@ label{
     color: var(--text);
     margin-left: 20%;
     font-size: 40px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 .linha1, .linha2 {
     display: flex;
@@ -141,13 +162,13 @@ label{
 .maior {
     background-color: var(--bg-light);
     width: 50%;
-    height: 400px;
+    height: 450px;
     margin: 5px;
 }
 .menor {
     background-color: var(--bg-light);
     width: 20%;
-    height: 400px;
+    height: 450px;
     margin: 5px;
 }
 .maior img, .menor img{
@@ -161,18 +182,23 @@ label{
     width: 101%;
 }
 .maior p, .menor p{
-    margin-left: 5px;
+    margin-left: 10px;
     color: var(--text-muted);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 .maior h3, .menor h3{
+    margin-left: 10px;
     color: var(--text);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 .linguagens-projeto{
     display: flex;
 }
-.linguagens p{
-    margin: 5px;
-}
+
 /* ------------------------------------------- */
 /* Estilos para o Light Mode */
 /* ------------------------------------------- */
