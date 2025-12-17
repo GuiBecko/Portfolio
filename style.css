@@ -5,6 +5,7 @@
     --text: hsl(0, 0%, 95%);
     --text-muted: hsl(0, 0%, 70%);
     --highlight: hsl(0, 0%, 40%);
+    --color-red:#b4637a;
     
     --icon-filter-light: invert(1);
     --icon-filter-dark: invert(0);
@@ -78,6 +79,7 @@ label{
     width: 50%;
     border-top: 1px solid var(--highlight);
     border-radius: 20px;
+    margin-bottom: 40px;
 }
 h1{
     -webkit-user-select: none;    
@@ -90,10 +92,20 @@ h1{
     margin-left: 40px;
 }
 .pfp{
+    cursor: pointer;
     background: var(--bg-light);
     width: 400px;
     height: 400px;
     margin-right: 30px;
+    transition: width .5s, height .5s, background-color .1s;
+    border-radius: 10px;
+}
+.pfp:hover{
+    width:410px;
+    height: 410px;
+}
+.pfp:active{
+    background-color: hsl(60, 10%, 50%);
 }
 .profile-texts h1{
     color: var(--text);
@@ -166,6 +178,12 @@ h1{
     margin: 5px;
     padding: 15px;
     border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(45deg, var(--highlight),10%,var(--bg-dark));
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    cursor: pointer;
+    transition: all .5s;
 }
 .menor {
     position: relative;
@@ -175,21 +193,37 @@ h1{
     margin: 5px;
     padding: 15px;
     border-radius: 10px;
+    background: linear-gradient(45deg, var(--highlight),10%,var(--bg-dark));
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    cursor: pointer;
+    transition: all .5s;
 }
+.maior:hover, .menor:hover{
+    background-size: 100% 100%;
+
+}
+
 .em-processo::before{
     content: 'Em \A processo';
     white-space: pre;
-    padding: 10px;
-    height: 70px;
-    width: 45%;
-    background-color: var(--bg-light);
+    height: 90px;
+    width: 90px;
+    background-color: var(--color-red);
     position: absolute;
-    border-bottom-right-radius: 30px;
-    border-top-right-radius: 30px;
+    right: -15px;
+    top: -10px;
+    border-radius: 50%;
     color: var(--text);
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     font-style: normal;
+
+    display: flex;
+    align-items: center;     
+    justify-content: center;  
+    text-align: center;      
+    line-height: 1.2;
 }
 .maior a img, .menor a img{
     height: 300px;
@@ -197,7 +231,10 @@ h1{
     transition: 0.5s;
     overflow: hidden;
     border-radius: 10px;
+    object-fit: cover;
+    object-position: left;
 }
+
 .maior img:hover, .menor img:hover{
     cursor: pointer;
     height: 305px;
@@ -232,8 +269,9 @@ h1{
     --bg-light:hsl(0, 0%, 100%);
     --text: hsl(0, 0%, 5%);
     --text-muted: hsl(0, 0%, 30%);
-    --highlight: hsl(0, 0%, 60%)
-    
+    --highlight: hsl(0, 0%, 100%);
+    --color-red: #ebbcba;
+
     --icon-filter-light: invert(1);
     --icon-filter-dark: invert(0);
     --icon-filter-current: var(--icon-filter-dark);
