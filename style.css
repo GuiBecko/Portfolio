@@ -12,12 +12,14 @@
     --icon-filter-current: var(--icon-filter-light);
     --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
 }
+
 body{
     margin: 0;
     display: flex;
     justify-content: center;
     background-color: var(--bg-dark);
 }
+
 label{
     position: absolute;
     top: 0;
@@ -201,7 +203,7 @@ h1{
 }
 .maior:hover, .menor:hover{
     background-size: 100% 100%;
-
+    
 }
 
 .em-processo::before{
@@ -218,7 +220,7 @@ h1{
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     font-style: normal;
-
+    
     display: flex;
     align-items: center;     
     justify-content: center;  
@@ -271,10 +273,101 @@ h1{
     --text-muted: hsl(0, 0%, 30%);
     --highlight: hsl(0, 0%, 100%);
     --color-red: #ebbcba;
-
+    
     --icon-filter-light: invert(1);
     --icon-filter-dark: invert(0);
     --icon-filter-current: var(--icon-filter-dark);
     --gradient: linear-gradient(0deg, var(--bg) 95%, var(--bg-light));
 }
 
+@media(max-width: 1730px){
+    .profile{
+        display: flex;
+        padding: 30px;
+        margin-left: 40px;
+    }
+    .pfp{
+        cursor: pointer;
+        background: var(--bg-light);
+        width: 300px;
+        height: 300px;
+        margin-right: 30px;
+        transition: width .5s, height .5s, background-color .1s;
+        border-radius: 10px;
+    }
+}
+@media(max-width:1520px){
+    .toggle-slot{
+        height: 2em;
+        width: 4em;
+    }
+    .toggle-button{
+        transform: translate(0.3em, 0.25em);
+        position: absolute;
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 50%;
+        background-color: yellow;
+        transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+    }
+    .toggle-checkbox:checked ~ .toggle-slot .toggle-button{
+        background-color: white;
+        transform: translate(2em, 0.25em);
+    }
+    .center{
+        position: absolute;
+        transform: translate(25%, 25%);
+        background-color: #ffeccf;
+        height: 1em;
+        width: 1em;
+        border-radius: 50%;
+    }
+}
+@media(max-width:1182px){
+    .pfp{
+        height: 500px;
+    }
+    .profile{
+        margin-left: 10px;
+    }
+    .pfp:hover{
+        height: 510px;
+    }
+    .profile-texts h1{
+        font-size: xx-large;
+    }
+    .profile-texts h2{
+        font-size: x-large;
+    }
+}
+/*.profile-texts h1{
+    color: var(--text);
+    font-size: xxx-large;
+    margin-bottom: -10px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.profile-texts h2{
+    color: var(--text-muted);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.profile-texts p{
+    color: var(--text-muted);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.profile-texts ul{
+    padding:0;
+}
+.profile-texts li{
+    padding-bottom: 5px;
+    color: var(--text-muted);
+    list-style-type: none;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
